@@ -1,0 +1,40 @@
+NEVIS LARGACHA
+INFORMATICA -II
+INFORME DE ANALISIS DEL DESARROLLO
+
+
+ANALISIS DEL PROBLEMA
+Se requiere modelar un sistema para gestionar alojamientos hogareños usando programación orientada a objetos en C++. 
+El sistema debe manejar huéspedes, anfitriones, alojamientos y reservaciones, con operaciones de búsqueda, registro, 
+cancelación, consulta y actualización de datos, respetando la disponibilidad y lógica de negocio.
+
+DIAGRAMA DE CLASES
+(Adjunto en una imagen en el repositorio)
+Clases:
+- Usuario: documento, antigüedad, puntuación, métodos virtuales.
+- Huésped: reservaciones, métodos para hacer y anular reservas.
+- Anfitrión: alojamientos, métodos para consultar y actualizar histórico.
+- Alojamiento: datos generales, amenidades, reservas vigentes.
+- Reservación: datos de la reserva, huésped, alojamiento.
+- Fecha: día, mes, año.
+- GestorSistema: colección de usuarios, alojamientos, gestiona sesiones, carga y persistencia.
+
+3. FORMATOS DE ARCHIVOS PROPUESTOS
+
+- huespedes.txt: documento,antigüedad,puntuación
+- anfitriones.txt: documento,antigüedad,puntuación,códigosAlojamientos
+- alojamientos.txt: código,nombre,tipo,departamento,municipio,dirección,precio,amenidades separadas por ;
+- reservas_vigentes.txt: códigoReserva,documentoHuesped,codigoAlojamiento,fechaInicio,duración,métodoPago,fechaPago,monto,anotaciones
+- reservas_historicas.txt: igual al anterior
+
+4. CONSIDERACIONES TECNICAS A TENER EN CUENTA EN LA IMPLEMENTACION DE LA SOLUCIÓN
+- Se implementarán constructores, destructores, métodos de copia, sobrecargas y métodos virtuales.
+- Las estructuras serán propias, sin STL, con memoria dinámica.
+- La clase GestorSistema será el núcleo del programa.
+
+5. JUSTIFICACIÓN DE LA SOLUCION PRPUESTA
+
+- Separación de responsabilidades por clases mejora la modularidad y claridad.
+- La clase Fecha facilita validaciones y cálculos de disponibilidad.
+- El uso de punteros facilita el control de memoria y relación entre objetos.
+- La eficiencia se mejora evitando redundancia de datos y usando estructuras apropiadas.
